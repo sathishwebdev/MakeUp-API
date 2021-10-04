@@ -5,7 +5,7 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-color: wheat;
+    /* background-color: wheat; */
     color: rgb(43, 43, 43);
 }
 
@@ -13,35 +13,60 @@ html{
     margin: 0;
     overflow-x: hidden;
     scrollbar-width: 1px;
-    background-color: wheat;
+    /* background-color: wheat; */
     color:rgb(43, 43, 43);
 }
 body{
     margin: 0px;
-    background-color: wheat;
+    /* background-color: wheat; */
     color:rgb(43, 43, 43);
+    text-transform: uppercase;
 }
 img{
     width: 100%;
-    max-height: 40vh;
+    max-height: 60vh;
+    
 }
 .jumbo{
-    padding: 2%;
-    margin: 1%;
+    /* padding: 2%; */
+    /* margin: 1%;  */
+    width: 100%;
     max-width: 999px;
+
 }
 
+.flex-box{
+    display:flex;
+     overflow: auto; 
+    white-space:nowrap;
+
+}
+@media screen and  (max-width : 567px){
+    .flex-box{
+        display:block;
+         /* overflow: auto;  */
+        /* white-space: nowrap; */
+    
+    } 
+}
 
 .box{
-    background-color: rgb(43, 42, 42);
-    color: rgb(228, 227, 227);
-    padding: 2%;
+    /* background-color: rgb(43, 42, 42); */
+    /* color: rgb(228, 227, 227); */
+    padding: 1%;
     margin: 1%;
+  height: fit-content;
     border-radius: 4px;
     align-items: center;
-    overflow: hidden;
-    max-height: 50vh;
+    justify-content: center;
+    /* max-height: 50vh; */
 
+}
+
+.img-con {
+    overflow: hidden;
+    height: 40vh;
+    width: 100%;
 }
 textarea:focus, .btn:focus, input:focus{
     outline: none;
@@ -114,7 +139,7 @@ nav{
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: wheat;
+    /* background: wheat; */
   }
   
   /* Handle */
@@ -126,3 +151,20 @@ nav{
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  .line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.line:before, .line:after {
+    content:"  ";
+    flex : 1 1;
+    border-bottom: 1px solid #797979;
+    margin: auto;
+}
+
+.line span{
+    padding: 3px;
+    margin: 3px;
+}
