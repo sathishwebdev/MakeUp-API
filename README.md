@@ -11,3 +11,4 @@ This Project is about to Fetch the makeup api which has the data of cosmetic pro
 - Description data contains html elements that affect the document html elements.
 - Only Brand names are able to search.
 - Nav bar doesn't close automatically.
+- Search result delayed and in that delay time nothing can show.

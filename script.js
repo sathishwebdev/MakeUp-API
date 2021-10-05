@@ -12,7 +12,7 @@ async function fetchApi(){
    var fetched = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json')
    var fetchedData = await fetched.json()
    filterBrand(fetchedData)}
-   catch(err){console.warn('error occurs' + err)}
+   catch(err){console.log('error occurs' + err)}
    return fetchedData
 }
 
@@ -101,11 +101,11 @@ fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`
     seResult.innerHTML='loading...'
     var sere = document.createElement('div')
     sere.setAttribute('class',' sere')
-     seResult.innerHTML =' '
-    
+     
+   //search title 
     var sh = document.getElementById('sHead');
     sh.innerHTML = `<h3>${searchVal}</h3>`
- 
+ //append product data
     data.forEach(data=>{
         var a = document.createElement('a')
         a.setAttribute('target','_blank')
@@ -130,7 +130,7 @@ fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`
     seResult.append(sere)
    
     searchVal = ''
-}).catch(err=>console.log(err))
+}).catch(err=>alert(err))
 
 return false
 }
