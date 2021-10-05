@@ -93,7 +93,7 @@ function search(){
    
 var searchVal = document.getElementById('searchBar').value
 
-fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`).then(data=>data.json()).then(data=>{
+fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`).then(data=>data.json()).then(data=>{
     console.log(data)
     var searchResult = document.getElementById('searchResult')
     searchResult.style.display = 'block';
