@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#000000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | MakeUP API</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -28,11 +28,30 @@
    
   </div>
 </nav>
+
+
   <!-- app -->
 <div id="home">
         <div  class="app">
           <div id="app" class="jumbo">
+<!-- search bar -->
+<div >
+  <div>
+<form action ='#' class="form" onsubmit='{search(); return false}' >
+  <input list ='brandNames' id='searchBar' type="text" required autofocus  placeholder = 'Search by brand'>
+  <datalist id="brandNames">
 
+  </datalist>
+  <input type="submit" class="btn btn-secondary" style="width: auto" value="Search">
+</form></div>
+<div id="searchResult"  >
+<div style="text-align: right">
+  <button class="close btn btn-danger" onclick="document.getElementById('searchResult').style.display = 'none'" >close</button>
+</div>
+<p id="sHead"></p>
+<div id="seResult"></div>
+</div>
+</div>
           </div>
             
         </div>

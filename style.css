@@ -41,6 +41,11 @@ img{
     white-space:nowrap;
 
 }
+.sere{
+    display:flex;
+    overflow: auto;
+    white-space:nowrap;
+}
 @media screen and  (max-width : 567px){
     .flex-box{
         display:block;
@@ -48,6 +53,11 @@ img{
         /* white-space: nowrap; */
     
     } 
+    .sere{
+        display:block;
+        /* overflow: auto;
+        white-space:nowrap; */
+    }
 }
 
 .box{
@@ -97,8 +107,12 @@ tr:nth-child(odd){
     color:rgb(43, 42, 42)
 }
 input{
-    width: 100%;
+    border: 1px grey solid;
+    width: 70%;
     margin: 1%;
+    padding: 3px;
+    padding-left: 1%;
+    border-radius: 15px;
 }
 footer{
     background-color: rgb(43, 42, 42);
@@ -168,3 +182,7 @@ nav{
     padding: 3px;
     margin: 3px;
 }
+#searchResult{
+    display:none;
+}
+.more {display: none;}
