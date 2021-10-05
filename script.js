@@ -96,7 +96,9 @@ var searchVal = document.getElementById('searchBar').value
 fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`).then(data=>data.json()).then(data=>{
     console.log(data)
     var searchResult = document.getElementById('searchResult')
+    searchResult.style.display = 'block';
     var seResult = document.getElementById('seResult')
+    seResult.innerHTML='loading...'
     var sere = document.createElement('div')
     sere.setAttribute('class',' sere')
      seResult.innerHTML =' '
@@ -124,9 +126,9 @@ fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchVal}`)
         boxes.append(con1)
         sere.append(boxes)
     })
-    
+    seResult.innerHTML=''
     seResult.append(sere)
-    searchResult.style.display = 'block';
+   
     searchVal = ''
 }).catch(err=>console.log(err))
 
