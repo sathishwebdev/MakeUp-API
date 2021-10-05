@@ -9,7 +9,7 @@ var navList = document.getElementById('navList')
 //fetch the api
 async function fetchApi(){
   try{  console.log('fetching')
-   var fetched = await fetch('products.json')
+   var fetched = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json')
    var fetchedData = await fetched.json()
    filterBrand(fetchedData)}
    catch(err){console.warn('error occurs' + err)}
